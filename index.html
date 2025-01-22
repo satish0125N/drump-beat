@@ -1,0 +1,142 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drump-Beat</title>
+  </head>
+  <body>
+    <style>
+      body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+      }
+      .keys {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        color: #fff;
+        width: 200px;
+        min-height: 150px;
+      }
+      .keys a {
+        padding: 15px;
+        border: 1px solid #fff;
+        color: #fff;
+        font-size: 18px;
+        line-height: 24px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .keys span {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    </style>
+    <div class="container">
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="65">
+          <kbd>A</kbd>
+          <span>Clap</span>
+        </a>
+      </div>
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="83">
+          <kbd>S</kbd>
+          <span>HitHat</span>
+        </a>
+      </div>
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="68">
+          <kbd>D</kbd>
+          <span>Openhat</span>
+        </a>
+      </div>
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="70">
+          <kbd>F</kbd>
+          <span>Kick</span>
+        </a>
+      </div>
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="71">
+          <kbd>G</kbd>
+          <span>Boom</span>
+        </a>
+      </div>
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="72">
+          <kbd>H</kbd>
+          <span>Ride</span>
+        </a>
+      </div>
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="74">
+          <kbd>J</kbd>
+          <span>Snare</span>
+        </a>
+      </div>
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="75">
+          <kbd>K</kbd>
+          <span>Desi Dhol</span>
+        </a>
+      </div>
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="76">
+          <kbd>L</kbd>
+          <span>Tom</span>
+        </a>
+      </div>
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="90">
+          <kbd>Z</kbd>
+          <span>DrumRoll</span>
+        </a>
+      </div>
+      <div class="keys">
+        <a href="javascript:(void(0));" data-key="88">
+          <kbd>X</kbd>
+          <span>HeavyKick</span>
+        </a>
+      </div>
+      
+
+      
+
+    <audio data-key="65" src="sounds/clap.mp3"></audio>
+     <audio data-key="83" src="sounds/hithat.mp3"></audio>
+    <audio data-key="68" src="sounds/openhat.mp3"></audio>
+    <audio data-key="70" src="sounds/kick.mp3"></audio>
+    <audio data-key="71" src="sounds/boom.mp3"></audio>
+    <audio data-key="72" src="sounds/ride.mp3"></audio>
+    <audio data-key="74" src="sounds/snare.mp3"></audio>
+    <audio data-key="75" src="sounds/dhol.mp3"></audio>
+    <audio data-key="76" src="sounds/tom.mp3"></audio>
+    <audio data-key="90" src="sounds/drumroll.mp3"></audio>
+    <audio data-key="88" src="sounds/heavykick.mp3"></audio>
+   
+    <script>
+      window.addEventListener("keydown", function (e) {
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        if (!audio) return;
+        audio.currentTime = 0;
+        audio.play();
+      });
+    </script>
+  </body>
+</html>
